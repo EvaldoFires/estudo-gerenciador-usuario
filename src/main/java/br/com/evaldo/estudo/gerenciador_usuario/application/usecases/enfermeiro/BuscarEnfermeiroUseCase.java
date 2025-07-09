@@ -14,4 +14,5 @@ public class BuscarEnfermeiroUseCase {
     public Enfermeiro buscarPorCPF(String cpf){
         return repository.buscarPorCPF(cpf);
     }
+
 }

@@ -3,12 +3,13 @@ package br.com.evaldo.estudo.gerenciador_usuario.domain.models;
 import br.com.evaldo.estudo.gerenciador_usuario.domain.models.enums.Especialidade;
 
 public class Medico {
+
     private String cpf;
     private String nome;
     private String crm;
     private Especialidade especialidade;
 
-    public Medico(String cpf, String crm, Especialidade especialidade, String nome) {
+    public Medico(String cpf, String nome, String crm, Especialidade especialidade) {
         if (cpf == null || !cpf.matches("\\d{3}\\.\\d{3}\\.\\d{3}\\-\\d{2}")) {
             throw new IllegalArgumentException("Cpf no padrão incorreto!");
         }

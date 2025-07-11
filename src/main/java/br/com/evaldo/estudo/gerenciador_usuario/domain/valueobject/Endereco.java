@@ -2,15 +2,16 @@ package br.com.evaldo.estudo.gerenciador_usuario.domain.valueobject;
 
 public class Endereco {
 
+    private String cep;
     private String estado;
     private String cidade;
-    private String cep;
     private String bairro;
     private String rua;
-    private Integer numero;
+    private String numero;
     private String complemento;
 
-    public Endereco(String bairro, String cep, String cidade, String complemento, String estado, Integer numero, String rua) {
+    public Endereco(String cep, String estado, String cidade, String bairro,
+                    String rua, String numero, String complemento) {
         this.bairro = bairro;
         this.cep = cep;
         this.cidade = cidade;
@@ -60,11 +61,11 @@ public class Endereco {
         this.estado = estado;
     }
 
-    public Integer getNumero() {
+    public String getNumero() {
         return numero;
     }
 
-    public void setNumero(Integer numero) {
+    public void setNumero(String numero) {
         this.numero = numero;
     }
 

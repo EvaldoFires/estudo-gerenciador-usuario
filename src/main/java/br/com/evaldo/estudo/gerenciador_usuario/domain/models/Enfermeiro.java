@@ -8,7 +8,7 @@ public class Enfermeiro {
     private String coren;
     private Especialidade especialidade;
 
-    public Enfermeiro(String coren, String cpf, Especialidade especialidade, String nome) {
+    public Enfermeiro(String cpf, String nome, String coren, Especialidade especialidade) {
         if (cpf == null || !cpf.matches("\\d{3}\\.\\d{3}\\.\\d{3}\\-\\d{2}")) {
             throw new IllegalArgumentException("Cpf no padrão incorreto!");
         }

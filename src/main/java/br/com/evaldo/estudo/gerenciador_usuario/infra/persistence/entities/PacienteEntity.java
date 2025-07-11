@@ -1,6 +1,6 @@
 package br.com.evaldo.estudo.gerenciador_usuario.infra.persistence.entities;
 
-import br.com.evaldo.estudo.gerenciador_usuario.domain.valueobject.Endereco;
+import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -19,8 +19,9 @@ public class PacienteEntity {
     @Id
     private String cpf;
     private String nome;
-    private LocalDate nascimento;
     private String email;
-    private Endereco endereco;
+    private LocalDate nascimento;
+    @Embedded
+    private EnderecoEntity endereco;
     private String dadosDeSaude;
 }

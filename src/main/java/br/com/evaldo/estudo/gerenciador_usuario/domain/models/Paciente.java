@@ -8,13 +8,13 @@ public class Paciente {
 
     private String cpf;
     private String nome;
-    private LocalDate nascimento;
     private String email;
+    private LocalDate nascimento;
     private Endereco endereco;
     private String dadosDeSaude;
 
-    public Paciente(String cpf, String dadosDeSaude, String email,
-                    Endereco endereco, LocalDate nascimento, String nome) {
+    public Paciente(String cpf, String nome, String email, LocalDate nascimento,
+                    Endereco endereco, String dadosDeSaude) {
 
         if (cpf == null || !cpf.matches("\\d{3}\\.\\d{3}\\.\\d{3}\\-\\d{2}")) {
             throw new IllegalArgumentException("Cpf no padrão incorreto!");

@@ -22,16 +22,17 @@ public class MedicoRepositoryJPAImpl implements MedicoRepository {
 
     @Override
     public Medico cadastrarMedico(Medico medico) {
-        MedicoEntity medicoSalvo = repository.save(mapper.toEntity(medico));
+        MedicoEntity medicoRecebido = mapper.toEntity(medico);
+        MedicoEntity medicoSalvo = repository.save(medicoRecebido);
         return mapper.toDomain(medicoSalvo);
     }
 
     @Override
     public Medico buscarPorCPF(String cpf) {
-        MedicoEntity entity = repository.findById(cpf).orElseThrow(() ->new RecursoNaoEncontradoException(
+        MedicoEntity medico = repository.findById(cpf).orElseThrow(() -> new RecursoNaoEncontradoException(
                 "Medico não encontrado com o cpf: " + cpf
         ));
-        return mapper.toDomain(entity);
+        return mapper.toDomain(medico);
     }
 
     @Override

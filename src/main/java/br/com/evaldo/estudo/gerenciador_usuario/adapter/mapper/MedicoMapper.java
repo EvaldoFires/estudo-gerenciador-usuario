@@ -9,8 +9,10 @@ import org.springframework.stereotype.Component;
 public class MedicoMapper {
 
     public MedicoDTO toDTO(Medico medico) {
-        return new MedicoDTO(medico.getCpf(), medico.getNome(),
-                medico.getCrm(), medico.getEspecialidade());
+        return new MedicoDTO(medico.getCpf(),
+                medico.getNome(),
+                medico.getCrm(),
+                medico.getEspecialidade());
     }
 
     public Medico toDomain(MedicoDTO dto) {
@@ -23,12 +25,10 @@ public class MedicoMapper {
     }
 
     public MedicoEntity toEntity(Medico medico) {
-        MedicoEntity entity = new MedicoEntity();
-        entity.setCpf(medico.getCpf());
-        entity.setNome(medico.getNome());
-        entity.setCrm(medico.getCrm());
-        entity.setEspecialidade(medico.getEspecialidade());
-        return entity;
+        return new MedicoEntity(medico.getCpf(),
+                medico.getNome(),
+                medico.getCrm(),
+                medico.getEspecialidade());
     }
 
     public Medico toDomain(MedicoEntity entity) {

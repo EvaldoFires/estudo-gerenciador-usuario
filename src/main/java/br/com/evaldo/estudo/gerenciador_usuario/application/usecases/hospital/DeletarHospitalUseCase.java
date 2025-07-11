@@ -10,7 +10,7 @@ public class DeletarHospitalUseCase {
         this.repository = repository;
     }
 
-    public void deletarPorCPF(Long id){
+    public void deletarPorId(Long id){
         repository.deletarPorId(id);
     }
 }

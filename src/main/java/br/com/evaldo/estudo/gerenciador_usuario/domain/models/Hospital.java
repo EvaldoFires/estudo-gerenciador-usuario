@@ -10,7 +10,7 @@ public class Hospital {
     private Endereco endereco;
     private Tipo tipo;
 
-    public Hospital(Endereco endereco, Long id, String nome, Tipo tipo) {
+    public Hospital(Long id, String nome, Endereco endereco, Tipo tipo) {
         this.endereco = endereco;
         this.id = id;
         this.nome = nome;

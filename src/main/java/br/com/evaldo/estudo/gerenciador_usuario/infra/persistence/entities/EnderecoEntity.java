@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 public class EnderecoEntity {
+
     private String cep;
     private String estado;
     private String cidade;

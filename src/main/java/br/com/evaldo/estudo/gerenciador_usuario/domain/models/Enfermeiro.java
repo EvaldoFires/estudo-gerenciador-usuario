@@ -3,6 +3,7 @@ package br.com.evaldo.estudo.gerenciador_usuario.domain.models;
 import br.com.evaldo.estudo.gerenciador_usuario.domain.models.enums.Especialidade;
 
 public class Enfermeiro {
+
     private String cpf;
     private String nome;
     private String coren;
